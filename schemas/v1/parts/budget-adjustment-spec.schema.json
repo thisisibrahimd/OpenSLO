@@ -1,0 +1,117 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "https://openslo.com/schemas/v1/parts/budget-adjustment-spec.schema.json",
+	"title": "OpenSLO: Part -> Budget Adjustment Spec",
+	"description": "A budget adjustment is a date-time range from when events should be ignored in error budget calculations",
+	"type": "object",
+	"properties": {
+		"spec": {
+			"type": "object",
+			"required": [
+				"timeWindow",
+				"startTime",
+				"endTime"
+			],
+			"properties": {
+				"description": {
+					"$ref": "https://openslo.com/schemas/v1/parts/description.schema.json"
+				},
+				"service": {
+					"$ref": "https://openslo.com/schemas/v1/parts/name.schema.json"
+				},
+				"indicatorRef": {
+					"$ref": "https://openslo.com/schemas/v1/parts/name.schema.json"
+				},
+				"startTime": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"endTime": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"timeWindow": {
+					"type": "array",
+					"maxItems": 1,
+					"items": {
+						"type": "object",
+						"required": [
+							"duration"
+						],
+						"allOf": [
+							{
+								"properties": {
+									"duration": {
+										"$ref": "https://openslo.com/schemas/v1/parts/duration-shorthand.schema.json"
+									}
+								}
+							},
+							{
+								"if": {
+									"not": {
+										"type": "object",
+										"properties": {
+											"isRolling": {
+												"const": true
+											}
+										}
+									}
+								},
+								"then": {
+									"required": [
+										"calendar"
+									],
+									"properties": {
+										"calendar": {
+											"required": [
+												"startTime",
+												"timeZone"
+											],
+											"properties": {
+												"startTime": {
+													"type": "string",
+													"pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]) ([01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d$"
+												},
+												"timeZone": {
+													"type": "string",
+													"pattern": "[A-Z][a-zA-Z_]+\\/[A-Z][a-zA-Z_]+"
+												}
+											}
+										}
+									}
+								}
+							}
+						]
+					}
+				},
+			},
+			"allOf": [
+				{
+					"not": {
+						"type": "object",
+						"required": [
+							"indicator",
+							"indicatorRef"
+						]
+					}
+				},
+				{
+					"oneOf": [
+						{
+							"type": "object",
+							"required": [
+								"indicator"
+							]
+						},
+						{
+							"type": "object",
+							"required": [
+								"indicatorRef"
+							]
+						}
+					]
+				}
+			]
+		}
+	}
+}

@@ -114,6 +114,21 @@
 							"$ref": "https://openslo.com/schemas/v1/parts/slo-spec.schema.json"
 						}
 					]
+				},
+				{
+					"allOf": [
+						{
+							"type": "object",
+							"properties": {
+								"kind": {
+									"const": "SLO"
+								}
+							}
+						},
+						{
+							"$ref": "https://openslo.com/schemas/v1/parts/budget-adjustment-spec.schema.json"
+						}
+					]
 				}
 			]
 		}
