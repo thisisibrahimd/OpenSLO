@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema",
 	"$id": "https://openslo.com/schemas/v1/parts/general.schema.json",
-	"title": "OpenSLO: Part -> General Schema",
+	"title": "General Schema",
 	"description": "The OpenSLO General Schema lays out the basic structure of an OpenSLO document.",
 	"type": "object",
 	"required": [
