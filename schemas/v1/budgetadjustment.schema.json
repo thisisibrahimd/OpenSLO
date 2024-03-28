@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "https://openslo.com/schemas/v1/budgetadjustment.schema.json",
+	"title": "BudgetAdjustment",
+	"description": "A budget adjustment is a date-time range from when events should be ignored in error budget calculations",
+	"type": "object",
+	"allOf": [
+		{
+			"$ref": "https://openslo.com/schemas/v1/parts/general.schema.json"
+		},
+		{
+			"type": "object",
+			"properties": {
+				"kind": {
+					"const": "BudgetAdjustment"
+				}
+			}
+		},
+		{
+			"$ref": "https://openslo.com/schemas/v1/parts/budgetadjustment-spec.schema.json"
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "https://openslo.com/schemas/v1/service.schema.json",
+	"title": "Service",
+	"description": "A Service is a high-level grouping of SLO.",
+	"type": "object",
+	"allOf": [
+		{
+			"$ref": "https://openslo.com/schemas/v1/parts/general.schema.json"
+		},
+		{
+			"type": "object",
+			"properties": {
+				"kind": {
+					"const": "Service"
+				}
+			}
+		},
+		{
+			"$ref": "https://openslo.com/schemas/v1/parts/service-spec.schema.json"
+		}
+	]
+}
