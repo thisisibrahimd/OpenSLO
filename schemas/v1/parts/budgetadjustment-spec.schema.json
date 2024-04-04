@@ -84,34 +84,7 @@
 						]
 					}
 				}
-			},
-			"allOf": [
-				{
-					"not": {
-						"type": "object",
-						"required": [
-							"indicator",
-							"indicatorRef"
-						]
-					}
-				},
-				{
-					"oneOf": [
-						{
-							"type": "object",
-							"required": [
-								"indicator"
-							]
-						},
-						{
-							"type": "object",
-							"required": [
-								"indicatorRef"
-							]
-						}
-					]
-				}
-			]
+			}
 		}
 	}
 }
