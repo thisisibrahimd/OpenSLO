@@ -3,6 +3,8 @@ info:
   title: OpenSLO V1 Schema
   description: OpenSLO V1 Schema
   version: 1.0.0
+servers:
+  - url: "https://openslo.com"
 components:
   schemas:
     # Main Specs
@@ -129,6 +131,8 @@ components:
         type: string
     metadata:
       type: object
+      required:
+        - name
       properties:
         name:
           $ref: "#/components/schemas/name"
@@ -159,10 +163,10 @@ components:
           type: object
           properties:
             startTime:
-              type: object
+              type: string
               pattern: "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]) ([01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d$"
             timeZone:
-              type: object
+              type: string
               pattern: "[A-Z][a-zA-Z_]+\\/[A-Z][a-zA-Z_]+"
         isRolling:
           type: boolean
