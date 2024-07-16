@@ -4,3 +4,6 @@
 
 # Project specific
 node_modules
+
+# Generated Code
+dist
