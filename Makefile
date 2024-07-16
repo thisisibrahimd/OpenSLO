@@ -25,6 +25,10 @@ run/checks/schema-validation:
 build/go-code-from-openapi-schema:
 	GO_POST_PROCESS_FILE="/usr/local/bin/gofmt -w" openapi-generator generate -i schemas/v1/schema.yaml -g go -o dist/oag-go/ --inline-schema-name-mappings AlertPolicyCondition_inner=AlertPolicyCondition,AlertPolicyNotificationTarget_inner=AlertPolicyNotificationTarget --global-property models,modelDocs=false --package-name openslo_v1
 
+.PHONY: build/rust-code-from-openapi-schema
+build/rust-code-from-openapi-schema:
+	openapi-generator generate -i schemas/v1/schema.yaml -g rust -o dist/oag-rust/ --inline-schema-name-mappings AlertPolicyCondition_inner=AlertPolicyCondition,AlertPolicyNotificationTarget_inner=AlertPolicyNotificationTarget --global-property models,modelDocs=false --package-name openslo_v1
+
 .PHONY: build/go-code-from-jsonschema
 build/go-code-from-jsonschema:
 	mkdir -p dist/quicktype-go
