@@ -33,6 +33,7 @@
     - [AlertNotificationTarget](#alertnotificationtarget)
       - [Notes (AlertNotificationTarget)](#notes-alertnotificationtarget)
     - [Service](#service)
+    - [BudgetAdjustment](#budget-adjustment)
 - [Examples](examples/README.md)
 - [Glossary](glossary/README.md)
 - Work in progress for future versions
@@ -794,5 +795,9 @@ metadata:
 spec:
   description: string # optional up to 1050 characters
 ```
+
+---
+
+#### Budget Adjustment
 
 [rfc1123-names]: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
