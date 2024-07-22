@@ -21,6 +21,10 @@ components:
     # Generic Spec
     generic:
       type: object
+      required:
+        - apiVersion
+        - kind
+        - metadata
       properties:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
@@ -33,6 +37,10 @@ components:
     # Main Specs
     slo:
       type: object
+      required:
+        - apiVersion
+        - kind
+        - metadata
       properties:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
@@ -47,6 +55,10 @@ components:
           $ref: "#/components/schemas/sloSpec"
     budgetAdjustment:
       type: object
+      required:
+        - apiVersion
+        - kind
+        - metadata
       properties:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
@@ -61,6 +73,10 @@ components:
           $ref: "#/components/schemas/budgetAdjustmentSpec"
     sli:
       type: object
+      required:
+        - apiVersion
+        - kind
+        - metadata
       properties:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
@@ -74,6 +90,10 @@ components:
           $ref: "#/components/schemas/sliSpec"
     service:
       type: object
+      required:
+        - apiVersion
+        - kind
+        - metadata
       properties:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
@@ -87,6 +107,10 @@ components:
           $ref: "#/components/schemas/serviceSpec"
     datasource:
       type: object
+      required:
+        - apiVersion
+        - kind
+        - metadata
       properties:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
@@ -100,6 +124,10 @@ components:
           $ref: "#/components/schemas/serviceSpec"
     alertPolicy:
       type: object
+      required:
+        - apiVersion
+        - kind
+        - metadata
       properties:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
@@ -113,6 +141,10 @@ components:
           $ref: "#/components/schemas/alertPolicySpec"
     alertCondition:
       type: object
+      required:
+        - apiVersion
+        - kind
+        - metadata
       properties:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
@@ -126,6 +158,10 @@ components:
           $ref: "#/components/schemas/alertConditionSpec"
     alertNotificationTarget:
       type: object
+      required:
+        - apiVersion
+        - kind
+        - metadata
       properties:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
