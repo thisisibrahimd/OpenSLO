@@ -7,6 +7,17 @@ servers:
   - url: "https://openslo.com"
 components:
   schemas:
+    kind:
+      type: string
+      enum:
+        - SLO
+        - BudgetAdjustment
+        - SLI
+        - Service
+        - DataSource
+        - AlertCondition
+        - AlertPolicy
+        - AlertNotificationTarget
     # Generic Spec
     generic:
       type: object
