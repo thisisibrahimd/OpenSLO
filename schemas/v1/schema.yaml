@@ -20,15 +20,15 @@ components:
           $ref: "#/components/schemas/opensloApiVersion"
         kind:
           type: string
-          enum:
-            - SLO
-            - BudgetAdjustment
-            - SLI
-            - Service
-            - DataSource
-            - AlertCondition
-            - AlertPolicy
-            - AlertNotificationTarget
+          # enum:
+          #   - SLO
+          #   - BudgetAdjustment
+          #   - SLI
+          #   - Service
+          #   - DataSource
+          #   - AlertCondition
+          #   - AlertPolicy
+          #   - AlertNotificationTarget
         metadata:
           $ref: "#/components/schemas/metadata"
         spec:
