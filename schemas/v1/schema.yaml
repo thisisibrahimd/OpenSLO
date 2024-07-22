@@ -55,7 +55,7 @@ components:
         kind:
           type: string
           enum:
-            - AlertCondition
+            - Service
         metadata:
           $ref: "#/components/schemas/metadata"
         spec:
@@ -68,7 +68,7 @@ components:
         kind:
           type: string
           enum:
-            - AlertCondition
+            - Datasource
         metadata:
           $ref: "#/components/schemas/metadata"
         spec:
