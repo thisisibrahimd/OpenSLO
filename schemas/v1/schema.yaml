@@ -7,17 +7,6 @@ servers:
   - url: "https://openslo.com"
 components:
   schemas:
-    kind:
-      type: string
-      enum:
-        - SLO
-        - BudgetAdjustment
-        - SLI
-        - Service
-        - DataSource
-        - AlertCondition
-        - AlertPolicy
-        - AlertNotificationTarget
     # Generic Spec
     generic:
       type: object
@@ -29,7 +18,16 @@ components:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
         kind:
-          $ref: "#/components/schemas/kind"
+          type: string
+          enum:
+            - SLO
+            - BudgetAdjustment
+            - SLI
+            - Service
+            - DataSource
+            - AlertCondition
+            - AlertPolicy
+            - AlertNotificationTarget
         metadata:
           $ref: "#/components/schemas/metadata"
         spec:
