@@ -45,7 +45,6 @@ components:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
         kind:
-          title: "SLOKind"
           type: string
           enum:
             - SLO
@@ -63,7 +62,6 @@ components:
         apiVersion:
           $ref: "#/components/schemas/opensloApiVersion"
         kind:
-          title: "BudgetAdjustmentKind"
           type: string
           enum:
             - BudgetAdjustment
