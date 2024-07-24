@@ -392,7 +392,10 @@ components:
         indicatorRef:
           $ref: "#/components/schemas/name"
         timeWindow:
-          $ref: "#/components/schemas/timeWindow"
+          type: array
+          maxItems: 1
+          items:
+            $ref: "#/components/schemas/timeWindow"
         budgetingMethod:
           type: string
           enum:
